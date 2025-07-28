@@ -1,0 +1,61 @@
+:root {
+    --text: black;
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.padding {
+    padding-inline: 300px;
+}
+
+body {
+    background: #7d7d7d;
+    background: linear-gradient(135deg, rgba(125, 125, 125, 1) 0%, rgba(91, 95, 106, 1) 37%, rgba(64, 68, 81, 1) 66%, rgba(36, 42, 58, 1) 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* nav bar styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 50px;
+    color: var(--white);
+}
+
+nav ul.links {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+nav ul.links li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+
+nav .logo {
+    user-select: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.merch {
+    border: 1px solid white;
+    padding-block: 0.5em;
+    padding-inline: 1.3em;
+    border-radius: 24px;
+}
