@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home - Charisma Music</title>
+  </head>
+  <body>
+    <!-- absolute positioned images -->
+    <div class="image-container">
+      a
+      <!-- <img src="/assets/charisma-bg.png" alt="" class="absolute-img" /> -->
+    </div>
+    <!-- navigation bar -->
+    <nav class="padding">
+      <div class="logo">Charisma Music</div>
+      <ul class="links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">New Release</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+      <div class="merch"><a href="#">Merch</a></div>
+    </nav>
+    <main class="padding">
+      <section class="hero">
+        <div class="description">
+          <h1>Guns N' Roses</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+            molestie ipsum. Sed eu metus ac enim sodales consectetur. Donec
+            fermentum interdum risus, mollis ornare nulla auctor sed.
+          </p>
+          <button><a href="#">Explore</a></button>
+          <div class="music-player">
+            <div class="song-info">
+              <div class="album-cover"></div>
+              <div class="track-details">
+                <div class="song-title">Sweet Child O' Mine</div>
+                <div class="album-name">Use Your Illusion 2</div>
+                <div class="actions">
+                  <div class="heart-icon" id="heartIcon">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="waveform" id="waveform">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-section">
+              <div class="time-display">
+                <span id="currentTime">3:17</span>
+                <span id="totalTime">5:37</span>
+              </div>
+              <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+            </div>
+
+            <div class="controls">
+              <button class="control-btn" id="prevBtn">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="19,20 9,12 19,4" />
+                  <line x1="5" y1="19" x2="5" y2="5" />
+                </svg>
+              </button>
+              <button class="control-btn play-pause-btn" id="playPauseBtn">
+                <svg id="pauseIcon" viewBox="0 0 24 24">
+                  <rect x="6" y="4" width="4" height="16" />
+                  <rect x="14" y="4" width="4" height="16" />
+                </svg>
+                <svg id="playIcon" viewBox="0 0 24 24" style="display: none">
+                  <polygon points="5,3 19,12 5,21" />
+                </svg>
+              </button>
+              <button class="control-btn" id="nextBtn">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="5,4 15,12 5,20" />
+                  <line x1="19" y1="5" x2="19" y2="19" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="popular">
+          <h2>Popular Corner</h2>
+          <div class="songs">
+            <img src="./assets/album.jpg" alt="song" />
+            <img src="./assets/album.jpg" alt="song" />
+            <img src="./assets/album.jpg" alt="song" />
+            <img src="./assets/album.jpg" alt="song" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

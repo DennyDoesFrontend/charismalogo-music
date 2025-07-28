@@ -1,0 +1,361 @@
+:root {
+    --text: black;
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.padding {
+    padding-inline: 300px;
+}
+
+.image-container {
+    min-width: 100vw;
+    min-height: 80vh;
+    position: absolute;
+    bottom: 0;
+    background-image: url("./assets/charisma-bg.png");
+    background-position: 0 calc(0px - 500px);
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: -99;
+}
+
+.absolute-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Show bottom half of image */
+}
+
+
+body {
+    background: #7d7d7d;
+    background: linear-gradient(135deg, rgba(125, 125, 125, 1) 0%, rgba(91, 95, 106, 1) 37%, rgba(64, 68, 81, 1) 66%, rgba(36, 42, 58, 1) 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* nav bar styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 50px;
+    color: var(--white);
+}
+
+nav ul.links {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+nav ul.links li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+
+nav .logo {
+    user-select: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.merch {
+    border: 1px solid white;
+    padding-block: 0.5em;
+    padding-inline: 1.3em;
+    border-radius: 24px;
+}
+
+/* HERO SECTION */
+main .hero {
+    display: flex;
+    color: var(--white)
+}
+
+main .hero .description {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+main .hero .description h1 {
+    font-size: 4.5rem;
+}
+
+main .hero .description h1, main .hero .description p {
+    max-width: 40%;
+}
+
+main .hero .description > button {
+    padding-block: 0.7em;
+    padding-inline: 2em;
+    border-radius: 24px;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+}
+
+main .hero .popular {
+    width: auto;
+    align-self: center;
+    /* background: rgba(255,255,255,0.2); */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+main .hero .popular h2 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.4em;
+}
+
+main .hero .popular .songs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;   
+    gap: 10px;
+}
+
+main .hero .popular .songs img {
+    max-width: 100px;
+    border-radius: 12px;
+}
+/* music player */
+.music-player {
+    width: 380px;
+    height: 240px;
+    /* background: rgba(0, 0, 0, 0.2); */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.song-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.album-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #8B4513, #DAA520, #FF4500);
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.album-cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="black" stroke-width="2"/><circle cx="50" cy="50" r="35" fill="none" stroke="black" stroke-width="1"/><circle cx="50" cy="50" r="25" fill="none" stroke="black" stroke-width="1"/><text x="50" y="35" text-anchor="middle" font-size="8" fill="black">GUNS N</text><text x="50" y="65" font-size="8" text-anchor="middle" fill="black">ROSES</text></svg>') center/cover;
+    opacity: 0.8;
+}
+
+.track-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.album-name {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.heart-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.heart-icon:hover {
+    transform: scale(1.1);
+}
+
+.heart-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+}
+
+.heart-icon.liked svg {
+    fill: #ff4757;
+    stroke: #ff4757;
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.wave-bar {
+    width: 3px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.wave-bar:nth-child(1) { height: 8px; }
+.wave-bar:nth-child(2) { height: 12px; }
+.wave-bar:nth-child(3) { height: 6px; }
+.wave-bar:nth-child(4) { height: 14px; }
+.wave-bar:nth-child(5) { height: 10px; }
+.wave-bar:nth-child(6) { height: 8px; }
+
+.progress-section {
+    margin-bottom: 20px;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff, #e0e0e0);
+    border-radius: 2px;
+    width: 58%;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.control-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.play-pause-btn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.play-pause-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+.play-pause-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.5); }
+}
+
+.playing .wave-bar {
+    animation: wave 1s ease-in-out infinite;
+}
+
+.playing .wave-bar:nth-child(1) { animation-delay: 0s; }
+.playing .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.playing .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.playing .wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.playing .wave-bar:nth-child(5) { animation-delay: 0.4s; }
+.playing .wave-bar:nth-child(6) { animation-delay: 0.5s; }
