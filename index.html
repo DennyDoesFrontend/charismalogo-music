@@ -15,24 +15,29 @@
   <body>
     <!-- absolute positioned images -->
     <div class="image-container">
-      a
       <!-- <img src="/assets/charisma-bg.png" alt="" class="absolute-img" /> -->
     </div>
     <!-- navigation bar -->
     <nav class="padding">
       <div class="logo">Charisma Music</div>
       <ul class="links">
-        <li><a href="#">About</a></li>
+        <li><a href="/index.html">About</a></li>
         <li><a href="/pages/music.html">Music</a></li>
-        <li><a href="#">New Release</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="./pages/release.html">New Release</a></li>
+        <li><a href="./pages/events.html">Events</a></li>
+        <li class="merch-mobile"><a href="#">Merch</a></li>
       </ul>
       <div class="merch"><a href="#">Merch</a></div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
     <main class="padding">
       <section class="hero">
         <div class="description">
-          <h1>Guns N' Roses</h1>
+          <h1>Charisma Music</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
             molestie ipsum. Sed eu metus ac enim sodales consectetur. Donec
@@ -101,15 +106,29 @@
           </div>
         </div>
         <div class="popular">
-          <h2>Popular Corner</h2>
           <div class="songs">
-            <img src="./assets/album.jpg" alt="song" />
-            <img src="./assets/album.jpg" alt="song" />
-            <img src="./assets/album.jpg" alt="song" />
-            <img src="./assets/album.jpg" alt="song" />
+            <a href="#"><img src="./assets/deezer.png" alt="Deezer" /></a>
+            <a
+              href="https://open.spotify.com/artist/02TuCfbywqEo1LI01C64VX"
+              target="_blank"
+              ><img src="./assets/Spotify.png" alt="Spotify"
+            /></a>
+            <a
+              href="https://music.apple.com/us/artist/charisma/1560650381"
+              target="_blank"
+              ><img src="./assets/applemusic.png" alt="Apple Music"
+            /></a>
+            <a href=""
+              ><img src="./assets/amazonmusic.png" alt="Amazon Music"
+            /></a>
+            <a href=""
+              ><img src="./assets/youtubemusic.png" alt="YouTube Music"
+            /></a>
+            <a href=""><img src="./assets/tidal.png" alt="Tidal Music" /></a>
           </div>
         </div>
       </section>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
