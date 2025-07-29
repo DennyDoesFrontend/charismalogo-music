@@ -22,15 +22,8 @@ a {
 body {
     background: #7d7d7d;
     background: linear-gradient(135deg, rgba(125, 125, 125, 1) 0%, rgba(91, 95, 106, 1) 37%, rgba(64, 68, 81, 1) 66%, rgba(36, 42, 58, 1) 100%);
-    /* background: #383838;
-    background: linear-gradient(135deg, rgba(56, 56, 56, 1) 0%, rgba(138, 95, 73, 1) 37%, rgba(163, 79, 34, 1) 66%, rgba(184, 62, 2, 1) 100%); */
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    overflow: hidden;
-}
-
-.merch-mobile {
-    display: none;
 }
 
 /* nav bar styling */
@@ -67,6 +60,10 @@ nav .logo {
     border-radius: 24px;
 }
 
+.merch-mobile {
+    display: none;
+}
+
 /* Mobile hamburger */
 .hamburger {
     display: none;
@@ -83,108 +80,14 @@ nav .logo {
     transition: 0.3s;
 }
 
-/* Mobile Responsive */
-@media (max-width: 900px) {
-    .padding {
-        padding-inline: 30px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    nav ul.links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(135deg, rgba(125, 125, 125, 0.98) 0%, rgba(91, 95, 106, 0.98) 37%, rgba(64, 68, 81, 0.98) 66%, rgba(36, 42, 58, 0.98) 100%);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-        z-index: 1000;
-    }
-
-    nav ul.links.active {
-        transform: translateY(0);
-    }
-
-    nav ul.links li {
-        font-size: 2rem;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.5s ease;
-    }
-
-    nav ul.links.active li {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    nav ul.links.active li:nth-child(1) { transition-delay: 0.1s; }
-    nav ul.links.active li:nth-child(2) { transition-delay: 0.2s; }
-    nav ul.links.active li:nth-child(3) { transition-delay: 0.3s; }
-    nav ul.links.active li:nth-child(4) { transition-delay: 0.4s; }
-    nav ul.links.active li:nth-child(5) { transition-delay: 0.5s; }
-
-    .merch {
-        display: none;
-    }
-
-    nav ul.links.active .merch-mobile {
-        display: block;
-    }
-
-    .merch-mobile a {
-        border: 1px solid white;
-        padding-block: 0.5em;
-        padding-inline: 1.3em;
-        border-radius: 24px;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-}
-
-@media (max-width: 600px) {
-    .padding {
-        padding-inline: 20px;
-    }
-
-    nav {
-        padding-block: 30px;
-    }
-
-    nav .logo {
-        font-size: 1.1rem;
-    }
-
-    nav ul.links li {
-        font-size: 1.8rem;
-    }
-}
-
 .image-container {
     min-width: 100vw;
     min-height: 80vh;
     position: absolute;
     bottom: 0;
     background-image: url("./assets/charisma-bg.png");
-    background-position: 0 calc(0px - 500px);
-    background-size:cover;
+    background-position: center bottom;
+    background-size: cover;
     background-repeat: no-repeat;
     z-index: -99;
 }
@@ -193,52 +96,71 @@ nav .logo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Show bottom half of image */
+    object-position: center bottom;
 }
 
 /* HERO SECTION */
+
+main {
+    background-image: url("/assets/charisma-tvs.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 main .hero {
     display: flex;
-    color: var(--white)
+    color: var(--white);
+    min-height: calc(100vh - 140px);
+    gap: 2rem;
+    align-items: center;
 }
 
 main .hero .description {
     flex: 2;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
 }
 
 main .hero .description h1 {
     font-size: 5rem;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
 
-main .hero .description h1, main .hero .description p {
-    max-width: 40%;
-    /* font-weight: 500; */
+main .hero .description h1, 
+main .hero .description p {
+    max-width: 80%;
+}
+
+main .hero .description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 main .hero .description > button {
-    padding-block: 0.7em;
-    padding-inline: 2em;
+    padding: 0.7em 2em;
     border-radius: 24px;
-    background-color: rgba(0,0,0,0.8);
-    font-size: 600;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    font-weight: 600;
     border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+main .hero .description > button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
 }
 
 main .hero .popular {
-    width: auto;
-    align-self: start;
-    /* background: rgba(255,255,255,0.2); */
+    align-self: flex-start;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 20px;
-    position: relative;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -246,32 +168,31 @@ main .hero .popular h2 {
     font-weight: 400;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 0.4em;
+    margin-bottom: 1rem;
 }
 
 main .hero .popular .songs {
     display: grid;
-    grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr;   
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     gap: 10px;
 }
 
 main .hero .popular .songs img {
-    /* max-width: 50px; */
     max-height: 50px;
+    width: 100%;
     border-radius: 12px;
+    object-fit: contain;
 }
+
 /* music player */
 .music-player {
     width: 380px;
-    height: 240px;
-    /* background: rgba(0, 0, 0, 0.2); */
+    height: auto;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 20px;
-    position: relative;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -462,4 +383,525 @@ main .hero .popular .songs img {
 
 .play-pause-btn:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+
+/* Newsletter Section */
+.newsletter {
+    margin-top: 50px;
+    padding-block: 50px;
+    color: var(--white);
+}
+
+.newsletter-container {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.newsletter-container h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.newsletter-container p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-form input {
+    padding: 0.7em 1em;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    width: 250px;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form button {
+    padding: 0.7em 2em;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.newsletter-form button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+/* Events Carousel */
+.events {
+    margin-top: 50px;
+    padding-block: 50px;
+    color: var(--white);
+}
+
+.events h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.event-card {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.event-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.event-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-details p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.event-btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.event-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Footer */
+footer {
+    padding-block: 50px;
+    color: var(--white);
+    text-align: center;
+}
+
+.social-links h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1750px) {
+    .padding {
+        padding-inline: 100px;
+    }
+
+    main .hero .description h1 {
+        font-size: 4rem;
+    }
+
+    main .hero .description p {
+        max-width: 90%;
+    }
+
+    .music-player {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .newsletter-form input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .padding {
+        padding-inline: 50px;
+    }
+
+    main .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    main .hero .description {
+        flex: none;
+        width: 100%;
+    }
+
+    main .hero .description h1 {
+        font-size: 3.5rem;
+    }
+
+    main .hero .description p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    main .hero .popular {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    main .hero .popular .songs {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .music-player {
+        max-width: 300px;
+    }
+
+    .event-card {
+        flex: 0 0 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .padding {
+        padding-inline: 30px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul.links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, rgba(125, 125, 125, 0.98) 0%, rgba(91, 95, 106, 0.98) 37%, rgba(64, 68, 81, 0.98) 66%, rgba(36, 42, 58, 0.98) 100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav ul.links.active {
+        transform: translateY(0);
+    }
+
+    nav ul.links li {
+        font-size: 2rem;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.5s ease;
+    }
+
+    nav ul.links.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav ul.links.active li:nth-child(1) { transition-delay: 0.1s; }
+    nav ul.links.active li:nth-child(2) { transition-delay: 0.2s; }
+    nav ul.links.active li:nth-child(3) { transition-delay: 0.3s; }
+    nav ul.links.active li:nth-child(4) { transition-delay: 0.4s; }
+    nav ul.links.active li:nth-child(5) { transition-delay: 0.5s; }
+
+    .merch {
+        display: none;
+    }
+
+    nav ul.links.active .merch-mobile {
+        display: block;
+    }
+
+    .merch-mobile a {
+        border: 1px solid white;
+        padding-block: 0.5em;
+        padding-inline: 1.3em;
+        border-radius: 24px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    main .hero .description h1 {
+        font-size: 2.5rem;
+    }
+
+    main .hero .description p {
+        font-size: 0.9rem;
+    }
+
+    main .hero .popular .songs img {
+        max-height: 40px;
+    }
+
+    .newsletter-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .event-card {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .padding {
+        padding-inline: 20px;
+    }
+
+    nav {
+        padding-block: 30px;
+    }
+
+    nav .logo {
+        font-size: 1.1rem;
+    }
+
+    nav ul.links li {
+        font-size: 1.8rem;
+    }
+
+    main .hero .description h1 {
+        font-size: 2rem;
+    }
+
+    main .hero .description p {
+        font-size: 0.85rem;
+    }
+
+    main .hero .description > button {
+        padding: 0.5em 1.5em;
+        font-size: 0.9rem;
+    }
+
+    .music-player {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .song-info {
+        gap: 10px;
+    }
+
+    .album-cover {
+        width: 50px;
+        height: 50px;
+    }
+
+    .song-title {
+        font-size: 16px;
+    }
+
+    .album-name {
+        font-size: 12px;
+    }
+
+    .controls {
+        gap: 15px;
+    }
+
+    .play-pause-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .play-pause-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    main .hero .popular {
+        padding: 15px;
+    }
+
+    main .hero .popular h2 {
+        font-size: 1.2rem;
+    }
+
+    main .hero .popular .songs img {
+        max-height: 35px;
+    }
+
+    .newsletter-container {
+        padding: 20px;
+    }
+
+    .event-card {
+        flex: 0 0 180px;
+    }
+
+    .event-card img {
+        height: 120px;
+    }
+
+    .event-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .event-details p {
+        font-size: 0.9rem;
+    }
+
+    .social-icons img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+    main .hero .description h1 {
+        font-size: 1.8rem;
+    }
+
+    main .hero .description p {
+        font-size: 0.8rem;
+    }
+
+    .music-player {
+        padding: 10px;
+    }
+
+    .song-info {
+        margin-bottom: 15px;
+    }
+
+    .album-cover {
+        width: 40px;
+        height: 40px;
+    }
+
+    .song-title {
+        font-size: 14px;
+    }
+
+    .album-name {
+        font-size: 11px;
+    }
+
+    main .hero .popular .songs {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    main .hero .popular .songs img {
+        max-height: 30px;
+    }
+
+    .event-card {
+        flex: 0 0 160px;
+    }
+
+    .event-card img {
+        height: 100px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
 }
