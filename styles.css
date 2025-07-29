@@ -108,7 +108,7 @@ nav .logo {
 /* HERO SECTION */
 
 main {
-    background-image: url("/assets/charisma-tvs.PNG");
+    background-image: url("./assets/charisma-tvs.PNG");
     background-size: contain;
     background-repeat: no-repeat;
 }
