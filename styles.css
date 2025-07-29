@@ -99,6 +99,12 @@ nav .logo {
     object-position: center bottom;
 }
 
+.logo img{
+  max-width: 50px;
+  border-radius: 50%;
+  border: 10px solid black;
+}
+
 /* HERO SECTION */
 
 main {
@@ -109,7 +115,7 @@ main {
 main .hero {
     display: flex;
     color: var(--white);
-    min-height: calc(100vh - 140px);
+    /* min-height: calc(100vh - 140px); */
     gap: 2rem;
     align-items: center;
 }

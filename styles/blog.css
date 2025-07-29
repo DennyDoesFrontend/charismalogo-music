@@ -1,0 +1,148 @@
+:root {
+  --text: black;
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background: linear-gradient(135deg, rgba(125, 125, 125, 1) 0%, rgba(91, 95, 106, 1) 37%, rgba(64, 68, 81, 1) 66%, rgba(36, 42, 58, 1) 100%);
+  min-height: 100vh;
+  color: var(--white);
+}
+
+.padding {
+  padding-inline: 300px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 50px;
+  color: var(--white);
+}
+
+nav ul.links {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+nav ul.links li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+nav .logo {
+  user-select: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.merch {
+  border: 1px solid white;
+  padding-block: 0.5em;
+  padding-inline: 1.3em;
+  border-radius: 24px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.logo img{
+  max-width: 50px;
+  border-radius: 50%;
+  border: 10px solid black;
+}
+
+.main-content {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.blog-entry {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.blog-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.blog-body {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive Padding */
+@media (max-width: 900px) {
+  .padding {
+    padding-inline: 30px;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .padding {
+    padding-inline: 20px;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .blog-entry {
+    padding: 1.5rem;
+  }
+}

@@ -84,6 +84,12 @@ body {
           margin: 3px 0;
           transition: 0.3s;
       }
+      .logo img{
+  max-width: 50px;
+  border-radius: 50%;
+  border: 10px solid black;
+}
+
 
 @font-face {
     font-family: "Poppins";
