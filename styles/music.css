@@ -118,6 +118,7 @@ body {
 .album-card:hover{
     transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 15px;
 }
 .album-image{
     width: 100%;
@@ -202,7 +203,7 @@ body {
     border-radius: 20px;
     padding: 0.5rem 1.0rem;
     text-decoration: none;
-    color: #333;
+    color: black;
     align-items: center;
     display: inline-flex;
     gap: 8px;
