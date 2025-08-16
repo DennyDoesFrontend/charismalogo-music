@@ -6,181 +6,364 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Home - Charisma Music</title>
   </head>
   <body>
-    <!-- absolute positioned images -->
-    <div class="image-container">
-      <!-- <img src="/assets/charisma-bg.png" alt="" class="absolute-img" /> -->
-    </div>
-    <!-- navigation bar -->
+    <!-- Navigation Bar -->
     <nav class="padding">
-      <div class="logo"><img src="./assets/CL_logo.jpg" alt="" /></div>
+      <div class="logo">
+        <img src="./assets/CL_logo.jpg" alt="Charismalogo Logo" />
+      </div>
       <ul class="links">
-        <li><a href="./index.html">About</a></li>
-        <li><a href="./pages/music.html">Music</a></li>
-        <li><a href="./pages/events.html">Events</a></li>
-        <li><a href="./pages/blog.html">Blog</a></li>
-        <li class="merch-mobile"><a href="./pages/merch.html">Merch</a></li>
+        <li><a href="./index.html" class="active">HOME</a></li>
+        <li><a href="./pages/music.html">MUSIC</a></li>
+        <li><a href="./pages/events.html">EVENTS</a></li>
+        <li><a href="./pages/blog.html">BLOG</a></li>
+        <li class="merch-mobile"><a href="./pages/merch.html">MERCH</a></li>
       </ul>
-      <div class="merch"><a href="./pages/merch.html">Merch</a></div>
+      <div class="merch"><a href="./pages/merch.html">MERCH</a></div>
       <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </nav>
-    <main class="padding">
-      <section class="hero">
-        <div class="description">
-          <h1>Charisma Music</h1>
-          <p>
-            Charismalogo is a Ghanaian Afro-fusion musician. He is also known as
-            Charisma Worlanyo Logo. He's gaining recognition for his unique
-            voice and thought-provoking lyrics within the music
-            industry.Charismalogo has captured the hearts of fans worldwide with
-            his unique sound and captivating performances.
-          </p>
-          <button><a href="./pages/music.html">Explore</a></button>
-          <div class="music-player">
-            <div class="song-info">
-              <div class="album-cover"></div>
-              <div class="track-details">
-                <div class="song-title">Logoligi</div>
-                <div class="album-name">No Album</div>
-                <div class="actions">
-                  <div class="heart-icon" id="heartIcon">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="waveform" id="waveform">
-                    <div class="wave-bar"></div>
-                    <div class="wave-bar"></div>
-                    <div class="wave-bar"></div>
-                    <div class="wave-bar"></div>
-                    <div class="wave-bar"></div>
-                    <div class="wave-bar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="content-wrapper">
+          <h1 class="hero-title">CHARISMALOGO</h1>
+          <p class="hero-subtitle">Ghanaian Afro-fusion musician</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary">
+              <a href="./pages/music.html">Listen Now</a>
+            </button>
+            <button class="btn btn-secondary">
+              <a href="./pages/events.html">View Events</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Charisma Section -->
+    <section class="charisma-section">
+      <div class="charisma-container">
+        <div class="charisma-grid">
+          <div class="artist-image">
+            <div class="image-wrapper">
+              <img src="./assets/charisma-bg.png" alt="Charismalogo" />
+            </div>
+          </div>
+          <div class="main-content">
+            <h1 class="artist-name">CHARISMA LOGO</h1>
+            <p class="artist-description">
+              Charismalogo has captured the hearts of fans worldwide with his
+              unique sound and captivating performances.
+            </p>
+            <button class="explore-btn">
+              <a href="./pages/music.html">EXPLORE NOW</a>
+            </button>
+            <div class="music-player">
+              <div class="album-cover">
+                <img src="./assets/Logoligi.jpg" alt="Logoligi Album Cover" />
+              </div>
+              <div class="player-content">
+                <h3 class="track-title">LOGOLIGI</h3>
+                <p class="track-artist">Charisma Logo</p>
+                <div class="player-controls">
+                  <button class="play-btn">
+                    <div class="play-icon"></div>
+                  </button>
+                  <div class="progress-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="progress-section">
-              <div class="time-display">
-                <span id="currentTime">3:17</span>
-                <span id="totalTime">5:37</span>
-              </div>
-              <div class="progress-bar" id="progressBar">
-                <div class="progress-fill" id="progressFill"></div>
-              </div>
-            </div>
-            <div class="controls">
-              <button class="control-btn" id="prevBtn">
-                <svg viewBox="0 0 24 24">
-                  <polygon points="19,20 9,12 19,4" />
-                  <line x1="5" y1="19" x2="5" y2="5" />
-                </svg>
-              </button>
-              <button class="control-btn play-pause-btn" id="playPauseBtn">
-                <svg id="pauseIcon" viewBox="0 0 24 24">
-                  <rect x="6" y="4" width="4" height="16" />
-                  <rect x="14" y="4" width="4" height="16" />
-                </svg>
-                <svg id="playIcon" viewBox="0 0 24 24" style="display: none">
-                  <polygon points="5,3 19,12 5,21" />
-                </svg>
-              </button>
-              <button class="control-btn" id="nextBtn">
-                <svg viewBox="0 0 24 24">
-                  <polygon points="5,4 15,12 5,20" />
-                  <line x1="19" y1="5" x2="19" y2="19" />
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
-        <div class="popular">
-          <h2>Listen on Your Favorite Platform</h2>
-          <div class="songs">
-            <a href="#"><img src="./assets/boomplay.png" alt="Boomplay" /></a>
-            <a
-              href="https://open.spotify.com/artist/02TuCfbywqEo1LI01C64VX"
-              target="_blank"
-              ><img src="./assets/Spotify.png" alt="Spotify"
-            /></a>
-            <a
-              href="https://music.apple.com/us/artist/charisma/1560650381"
-              target="_blank"
-              ><img src="./assets/applemusic.png" alt="Apple Music"
-            /></a>
-            <a href=""
-              ><img src="./assets/amazonmusic.png" alt="Amazon Music"
-            /></a>
-            <a href=""
-              ><img src="./assets/youtubemusic.png" alt="YouTube Music"
-            /></a>
+        <div class="platforms">
+          <div class="platform-item">
+            <img src="./assets/Spotify.png" alt="Spotify" />
+            <span>Spotify</span>
+          </div>
+          <div class="platform-item">
+            <img src="./assets/boomplay.png" alt="Boomplay" />
+            <span>Boomplay</span>
+          </div>
+          <div class="platform-item">
+            <img src="./assets/applemusic.png" alt="Apple Music" />
+            <span>Apple Music</span>
+          </div>
+          <div class="platform-item">
+            <img src="./assets/amazonmusic.png" alt="Audiomack" />
+            <span>Audiomack</span>
           </div>
         </div>
-      </section>
-      <!-- Newsletter Signup Section -->
-      <section class="newsletter padding">
-        <div class="newsletter-container">
-          <h2>Join Our Newsletter</h2>
-          <p>
-            Stay updated with the latest releases, events, and exclusive offers!
-          </p>
-          <div class="newsletter-form">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              id="newsletterEmail"
-            />
-            <button id="subscribeBtn">Subscribe</button>
+      </div>
+    </section>
+
+    <!-- Album Section -->
+    <div class="album-container">
+      <div class="album-cover-event">
+        <img
+          src="./assets/change-my-life.jpg"
+          alt="Change My Life Album Cover"
+          class="cover-image"
+        />
+      </div>
+      <div class="album-info">
+        <div class="new-album-header">
+          <h1>NEW ALBUM</h1>
+          <div class="underline"></div>
+        </div>
+        <div class="song-info">
+          <img src="./assets/change-my-life.jpg" alt="Romance Song Thumbnail" />
+          <div class="song-title">Romance</div>
+          <div class="artist-name">Charismalogo</div>
+          <div class="album-year">Change My Life // 2023</div>
+        </div>
+        <div class="player">
+          <div class="play-button"></div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
           </div>
         </div>
-      </section>
-      <!-- Upcoming Events Carousel -->
-      <section class="events padding">
-        <h2>Upcoming Events</h2>
-        <div class="carousel">
-          <div class="carousel-inner">
-            <div class="event-card">
-              <img src="./assets/invitation.jpg" alt="Event 1" />
-              <div class="event-details">
-                <h3>Live in Concert</h3>
-                <p>August 1, 2025 - The Cactus Restaurant, Accra</p>
-                <a href="#" class="event-btn">Get Tickets</a>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-btn prev-btn">&#10094;</button>
-          <button class="carousel-btn next-btn">&#10095;</button>
-        </div>
-      </section>
-    </main>
-    <!-- Footer with Social Media Links -->
-    <footer class="padding">
-      <div class="social-links">
-        <h3>Connect with Us</h3>
-        <div class="social-icons">
-          <a href="https://x.com/charismalogo_" target="_blank">X</a>
-          <a href="https://www.instagram.com/charismalogo_/" target="_blank"
-            >Instagram</a
-          >
+        <button class="explore-button">
           <a
-            href="https://web.facebook.com/p/Charismalogo-100064489792437/?_rdc=1&_rdr"
             target="_blank"
-            >Facebook</a
+            href="https://open.spotify.com/track/7AWukIkIOOrvyQV1CgEyvF?si=b81402aa1a554a94"
+            >EXPLORE ALBUM</a
           >
-          <a href="https://www.tiktok.com/@charismalogo_" target="_blank"
-            >Tiktok</a
-          >
+        </button>
+      </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-header">
+          <h1>JOIN OUR NEWSLETTER</h1>
+          <div class="underline"></div>
+        </div>
+        <p class="newsletter-description">
+          Stay updated with Charismalogo's latest music, events, and exclusive
+          offers.
+        </p>
+        <div class="newsletter-form">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="email-input"
+          />
+          <button class="subscribe-button">SUBSCRIBE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="instagram-feed-section">
+      <div class="instagram-feed-container">
+        <div class="instagram-feed-header">
+          <h1>INSTAGRAM VIBES</h1>
+          <div class="underline"></div>
+        </div>
+        <p class="instagram-feed-description">
+          Dive into Charismalogo's world with exclusive behind-the-scenes, live
+          moments, and fan energy.
+        </p>
+        <div class="instagram-feed-grid">
+          <div class="instagram-feed-item">
+            <a
+              href="https://www.instagram.com/p/DNNo8gjqBAY/"
+              target="_blank"
+              style="display: block; text-decoration: none"
+            >
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DNNo8gjqBAY/"
+                data-instgrm-version="14"
+              >
+                <div style="padding: 16px">
+                  <div
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                  >
+                    View this post on Instagram
+                  </div>
+                </div>
+              </blockquote>
+            </a>
+            <div class="post-overlay">
+              <span class="platform-icon instagram"></span>
+            </div>
+          </div>
+          <div class="instagram-feed-item">
+            <a
+              href="https://www.instagram.com/p/DM7nUi7qwy5/"
+              target="_blank"
+              style="display: block; text-decoration: none"
+            >
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DM7nUi7qwy5/"
+                data-instgrm-version="14"
+              >
+                <div style="padding: 16px">
+                  <div
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                  >
+                    View this post on Instagram
+                  </div>
+                </div>
+              </blockquote>
+            </a>
+            <div class="post-overlay">
+              <span class="platform-icon instagram"></span>
+            </div>
+          </div>
+          <div class="instagram-feed-item">
+            <a
+              href="https://www.instagram.com/p/DMs3NaCq1wG/"
+              target="_blank"
+              style="display: block; text-decoration: none"
+            >
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DMs3NaCq1wG/"
+                data-instgrm-version="14"
+              >
+                <div style="padding: 16px">
+                  <div
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                  >
+                    View this post on Instagram
+                  </div>
+                </div>
+              </blockquote>
+            </a>
+            <div class="post-overlay">
+              <span class="platform-icon instagram"></span>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/charismalogo_/" class="follow-button"
+          >FOLLOW ON INSTAGRAM</a
+        >
+      </div>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </section>
+
+    <!-- Events Summary Section -->
+    <section class="events-summary-section">
+      <div class="events-summary-container">
+        <div class="events-summary-header">
+          <h1>UPCOMING SHOWS</h1>
+          <div class="underline"></div>
+        </div>
+        <p class="events-summary-description">
+          Catch Charismalogo live! Check out our latest performances and grab
+          your tickets.
+        </p>
+        <div class="events-summary-list">
+          <div class="event-summary-card">
+            <div class="event-summary-image">
+              <img
+                src="./assets/come-with-me.jpg"
+                alt="Charismalogo Live Event"
+              />
+              <div class="event-summary-overlay">
+                <div class="event-summary-date">
+                  <span class="day">01</span>
+                  <span class="month">AUG</span>
+                  <span class="year">2025</span>
+                </div>
+              </div>
+            </div>
+            <div class="event-summary-details">
+              <h3>Charismalogo Live</h3>
+              <p class="event-summary-info">
+                Venue: The Cactus Restaurant, Accra-Ghana
+              </p>
+              <p class="event-summary-info">Time: 8:00 PM - 11:00 PM</p>
+              <a href="./pages/events.html" class="event-summary-button"
+                >EVENT ENDED</a
+              >
+            </div>
+          </div>
+        </div>
+        <a href="./pages/events.html" class="events-button">SEE ALL EVENTS</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="footer-nav">
+          <h3>CHARISMALOGO</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/music.html">Music</a></li>
+            <li><a href="pages/events.html">Events</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="pages/merch.html">Merch</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>CONNECT</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/charismalogo_/"
+              class="social-icon instagram"
+              aria-label="Follow Charismalogo on Instagram"
+            ></a>
+            <a
+              href="https://open.spotify.com/artist/3fMbdgg4wU18AjLCKBhspK"
+              class="social-icon spotify"
+              aria-label="Listen to Charismalogo on Spotify"
+            ></a>
+            <a
+              href="https://music.youtube.com/channel/UC123456789"
+              class="social-icon youtube"
+              aria-label="Listen to Charismalogo on YouTube Music"
+            ></a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2025 Charismalogo. All rights reserved.</p>
         </div>
       </div>
     </footer>
