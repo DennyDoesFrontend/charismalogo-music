@@ -255,7 +255,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-
+    /* transition delays for the links */
     nav ul.links.active li:nth-child(1) { transition-delay: 0.1s; }
     nav ul.links.active li:nth-child(2) { transition-delay: 0.2s; }
     nav ul.links.active li:nth-child(3) { transition-delay: 0.3s; }
